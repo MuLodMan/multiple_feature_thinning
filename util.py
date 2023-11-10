@@ -7,4 +7,9 @@ else:
     print ("MPS device not found.")
 
 def binary_float_tensor_to_img(img:torch.Tensor):
-    return F.to_pil_image(img*255,mode="F")
+    (b,c,h,w) = img.shape
+    return F.to_pil_image(img.view(c,h,w)*255,mode="F")
+sigmoid_trend = 20
+
+#for debug
+scan_count = 3

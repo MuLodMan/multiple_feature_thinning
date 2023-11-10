@@ -1,2 +1,4 @@
 /__pycache__
 *.img
+/weight
+/output_images
